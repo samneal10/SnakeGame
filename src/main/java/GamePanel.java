@@ -46,10 +46,6 @@ public class GamePanel extends JPanel implements ActionListener {
     public void draw(Graphics g) {
 
         if (running) {
-            /*for (int i = 0; i < SCREEN_HEIGHT / UNIT_SIZE; i++) {
-                g.drawLine(i * UNIT_SIZE, 0, i * UNIT_SIZE, SCREEN_HEIGHT);
-                g.drawLine(0, i * UNIT_SIZE, SCREEN_WIDTH, i * UNIT_SIZE);
-            }*/
             g.setColor(Color.red);
             g.fillOval(appleX, appleY, UNIT_SIZE, UNIT_SIZE);
 
@@ -64,7 +60,7 @@ public class GamePanel extends JPanel implements ActionListener {
                 }
             }
             g.setColor(Color.red);
-            g.setFont(new Font("Ink Free", Font.BOLD, 40));
+            g.setFont(new Font("Ink Free", Font.BOLD, 25));
             FontMetrics metrics = getFontMetrics(g.getFont());
             g.drawString("Score: " + applesEaten, (SCREEN_WIDTH - metrics.stringWidth("Score: " + applesEaten)) / 2, g.getFont().getSize());
         } else {
@@ -73,8 +69,19 @@ public class GamePanel extends JPanel implements ActionListener {
     }
 
     public void newApple() {
-        appleX = random.nextInt((int) (SCREEN_WIDTH / UNIT_SIZE)) * UNIT_SIZE;
-        appleY = random.nextInt((int) (SCREEN_HEIGHT / UNIT_SIZE)) * UNIT_SIZE;
+        do {
+            appleX = random.nextInt((int) (SCREEN_WIDTH / UNIT_SIZE)) * UNIT_SIZE;
+            appleY = random.nextInt((int) (SCREEN_HEIGHT / UNIT_SIZE)) * UNIT_SIZE;
+        } while (appleIsOnSnake());
+    }
+
+    public boolean appleIsOnSnake() {
+        for (int i = 0; i < bodyParts; i++) {
+            if (appleX == x[i] && appleY == y[i]) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public void move() {
@@ -171,6 +178,22 @@ public class GamePanel extends JPanel implements ActionListener {
     public void setApplesEaten(int applesEaten) {
         this.applesEaten = applesEaten;
         this.bodyParts = applesEaten + 6;
+    }
+
+    public void setX(int[] newX) {
+        System.arraycopy(newX, 0, x, 0, Math.min(newX.length, x.length));
+    }
+
+    public void setY(int[] newY) {
+        System.arraycopy(newY, 0, y, 0, Math.min(newY.length, y.length));
+    }
+
+    public void setAppleX(int newAppleX) {
+        appleX = newAppleX;
+    }
+
+    public void setAppleY(int newAppleY) {
+        appleY = newAppleY;
     }
 
     public class myKeyAdapter extends KeyAdapter {

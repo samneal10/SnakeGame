@@ -3,7 +3,7 @@ import org.junit.jupiter.api.Test;
 
 import java.awt.event.KeyEvent;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class GamePanelTest {
     private GamePanel gamePanel;
@@ -23,5 +23,26 @@ public class GamePanelTest {
 
         int newBodyParts = gamePanel.getBodyParts();
         assertEquals(initialBodyParts + 1, newBodyParts);
+    }
+
+    @Test
+    public void testNewAppleNotOnSnake() {
+        gamePanel.setX(new int[]{0, 25, 50});
+        gamePanel.setY(new int[]{0, 0, 0});
+
+        gamePanel.newApple();
+
+        assertFalse(gamePanel.appleIsOnSnake());
+    }
+
+    @Test
+    public void testAppleIsOnSnake() {
+        gamePanel.setX(new int[]{0, 25, 50});
+        gamePanel.setY(new int[]{0, 0, 0});
+
+        gamePanel.setAppleX(25);
+        gamePanel.setAppleY(0);
+
+        assertTrue(gamePanel.appleIsOnSnake());
     }
 }
