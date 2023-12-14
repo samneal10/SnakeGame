@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c83fb2ad-ccfb-4add-a335-41e77a86590e" name="Changes" comment="Snake is moving correctly and grows by one body part every time it eats an apple. I want to fix the issue where the next apple can be generated underneath the snake. I want to introduce a game over screen and a score that increases as the game is played.">
+    <list default="true" id="c83fb2ad-ccfb-4add-a335-41e77a86590e" name="Changes" comment="I have fixed the issue where the apples were being generated under the snake.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GamePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/GamePanelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GamePanelTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702461112993</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="I have fixed the issue where the apples were being generated under the snake.">
+      <created>1702477284051</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1702477284051</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -141,6 +147,7 @@
     <MESSAGE value="Initial commit of Snake Game project that I am making." />
     <MESSAGE value="Set up game, initialised the game panel with a grid for visualisation. started to introduce the movement of the snake." />
     <MESSAGE value="Snake is moving correctly and grows by one body part every time it eats an apple. I want to fix the issue where the next apple can be generated underneath the snake. I want to introduce a game over screen and a score that increases as the game is played." />
-    <option name="LAST_COMMIT_MESSAGE" value="Snake is moving correctly and grows by one body part every time it eats an apple. I want to fix the issue where the next apple can be generated underneath the snake. I want to introduce a game over screen and a score that increases as the game is played." />
+    <MESSAGE value="I have fixed the issue where the apples were being generated under the snake." />
+    <option name="LAST_COMMIT_MESSAGE" value="I have fixed the issue where the apples were being generated under the snake." />
   </component>
 </project>

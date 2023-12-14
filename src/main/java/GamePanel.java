@@ -21,6 +21,8 @@ public class GamePanel extends JPanel implements ActionListener {
     Timer timer;
     Random random;
 
+    private JButton playAgainButton;
+
     GamePanel() {
 
         random = new Random();
@@ -28,6 +30,14 @@ public class GamePanel extends JPanel implements ActionListener {
         this.setBackground(Color.black);
         this.setFocusable(true);
         this.addKeyListener(new myKeyAdapter());
+        playAgainButton = new JButton("Play Again");
+        playAgainButton.setFocusable(false);
+        playAgainButton.addActionListener(e -> restartGame());
+
+        playAgainButton.setVisible(false);
+
+        this.add(playAgainButton, BorderLayout.SOUTH);
+
         startGame();
     }
 
@@ -140,6 +150,8 @@ public class GamePanel extends JPanel implements ActionListener {
 
         if (!running) {
             timer.stop();
+            playAgainButton.setVisible(true);
+            repaint();
         }
     }
 
@@ -154,6 +166,33 @@ public class GamePanel extends JPanel implements ActionListener {
         g.setFont(new Font("Ink Free", Font.BOLD, 75));
         FontMetrics metrics2 = getFontMetrics(g.getFont());
         g.drawString("Game Over :(", (SCREEN_WIDTH - metrics2.stringWidth("Game Over :(")) / 2, SCREEN_HEIGHT / 2);
+    }
+
+    public void restartGame() {
+        bodyParts = 6;
+        applesEaten = 0;
+        direction = 'R';
+        running = false;
+
+        setInitialSnakePosition();
+        newApple();
+
+        timer.restart();
+        running = true;
+
+        playAgainButton.setVisible(false);
+
+        repaint();
+    }
+
+    private void setInitialSnakePosition() {
+        int initialX = SCREEN_WIDTH / 2;
+        int initialY = SCREEN_HEIGHT / 2;
+
+        for (int i = 0; i < bodyParts; i++) {
+            x[i] = initialX - i * UNIT_SIZE;
+            y[i] = initialY;
+        }
     }
 
     @Override
