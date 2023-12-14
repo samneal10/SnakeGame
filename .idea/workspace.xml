@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c83fb2ad-ccfb-4add-a335-41e77a86590e" name="Changes" comment="I have fixed the issue where the apples were being generated under the snake.">
+    <list default="true" id="c83fb2ad-ccfb-4add-a335-41e77a86590e" name="Changes" comment="I have introduced a play again button which becomes visible at the game over screen. It's in the way of the score, so I want to rearrange these.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GamePanel.java" afterDir="false" />
     </list>
@@ -129,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702477284051</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="I have introduced a play again button which becomes visible at the game over screen. It's in the way of the score, so I want to rearrange these.">
+      <created>1702544554934</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1702544554934</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -148,6 +155,7 @@
     <MESSAGE value="Set up game, initialised the game panel with a grid for visualisation. started to introduce the movement of the snake." />
     <MESSAGE value="Snake is moving correctly and grows by one body part every time it eats an apple. I want to fix the issue where the next apple can be generated underneath the snake. I want to introduce a game over screen and a score that increases as the game is played." />
     <MESSAGE value="I have fixed the issue where the apples were being generated under the snake." />
-    <option name="LAST_COMMIT_MESSAGE" value="I have fixed the issue where the apples were being generated under the snake." />
+    <MESSAGE value="I have introduced a play again button which becomes visible at the game over screen. It's in the way of the score, so I want to rearrange these." />
+    <option name="LAST_COMMIT_MESSAGE" value="I have introduced a play again button which becomes visible at the game over screen. It's in the way of the score, so I want to rearrange these." />
   </component>
 </project>

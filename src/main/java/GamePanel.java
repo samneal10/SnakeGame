@@ -36,7 +36,7 @@ public class GamePanel extends JPanel implements ActionListener {
 
         playAgainButton.setVisible(false);
 
-        this.add(playAgainButton, BorderLayout.SOUTH);
+        this.add(playAgainButton);
 
         startGame();
     }
@@ -156,17 +156,21 @@ public class GamePanel extends JPanel implements ActionListener {
     }
 
     public void gameOver(Graphics g) {
+        // game over message to display
+        g.setColor(Color.red);
+        g.setFont(new Font("Ink Free", Font.BOLD, 60));
+        FontMetrics metrics2 = getFontMetrics(g.getFont());
+        g.drawString("Game Over :(", (SCREEN_WIDTH - metrics2.stringWidth("Game Over :(")) / 2, SCREEN_HEIGHT / 2);
         // score
         g.setColor(Color.red);
         g.setFont(new Font("Ink Free", Font.BOLD, 40));
         FontMetrics metrics1 = getFontMetrics(g.getFont());
-        g.drawString("Score: " + applesEaten, (SCREEN_WIDTH - metrics1.stringWidth("Score: " + applesEaten)) / 2, g.getFont().getSize());
-        // game over message to display
-        g.setColor(Color.red);
-        g.setFont(new Font("Ink Free", Font.BOLD, 75));
-        FontMetrics metrics2 = getFontMetrics(g.getFont());
-        g.drawString("Game Over :(", (SCREEN_WIDTH - metrics2.stringWidth("Game Over :(")) / 2, SCREEN_HEIGHT / 2);
+        g.drawString("Score: " + applesEaten, (SCREEN_WIDTH - metrics1.stringWidth("Score: " + applesEaten)) / 2, SCREEN_HEIGHT / 2 + metrics2.getHeight() + 10);
+        // play again button
+        playAgainButton.setBounds((SCREEN_WIDTH - playAgainButton.getPreferredSize().width) / 2, SCREEN_HEIGHT / 2 + metrics2.getHeight() + metrics1.getHeight() + 20, playAgainButton.getPreferredSize().width, playAgainButton.getPreferredSize().height);
+        playAgainButton.setVisible(true);
     }
+
 
     public void restartGame() {
         bodyParts = 6;
