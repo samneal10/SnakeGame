@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c83fb2ad-ccfb-4add-a335-41e77a86590e" name="Changes" comment="Rearranged the game over screen, so that game over, score, and play again button do not overlap.">
+    <list default="true" id="c83fb2ad-ccfb-4add-a335-41e77a86590e" name="Changes" comment="Rearranged the game over screen again - they are all nicely centred and don't overlap. Game over, then score, and then play again button below.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GameFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GameFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SnakeGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SnakeGame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/GamePanelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GamePanelTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -148,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702544554934</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Rearranged the game over screen again - they are all nicely centred and don't overlap. Game over, then score, and then play again button below.">
+      <created>1702633508798</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1702633508798</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -168,6 +177,7 @@
     <MESSAGE value="Snake is moving correctly and grows by one body part every time it eats an apple. I want to fix the issue where the next apple can be generated underneath the snake. I want to introduce a game over screen and a score that increases as the game is played." />
     <MESSAGE value="I have fixed the issue where the apples were being generated under the snake." />
     <MESSAGE value="I have introduced a play again button which becomes visible at the game over screen. It's in the way of the score, so I want to rearrange these." />
-    <option name="LAST_COMMIT_MESSAGE" value="I have introduced a play again button which becomes visible at the game over screen. It's in the way of the score, so I want to rearrange these." />
+    <MESSAGE value="Rearranged the game over screen again - they are all nicely centred and don't overlap. Game over, then score, and then play again button below." />
+    <option name="LAST_COMMIT_MESSAGE" value="Rearranged the game over screen again - they are all nicely centred and don't overlap. Game over, then score, and then play again button below." />
   </component>
 </project>
