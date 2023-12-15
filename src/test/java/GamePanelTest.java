@@ -1,8 +1,5 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import java.awt.event.KeyEvent;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 public class GamePanelTest {
@@ -12,6 +9,20 @@ public class GamePanelTest {
     public void setUp() {
         gamePanel = new GamePanel();
     }
+
+    @Test
+    public void testRestartsGame() {
+
+        gamePanel.setApplesEaten(3);
+        gamePanel.checkCollisions();
+
+        gamePanel.restartGame();
+
+        assertTrue(gamePanel.isRunning());
+        assertEquals(6, gamePanel.getBodyParts());
+        assertEquals(0, gamePanel.getApplesEaten());
+    }
+
 
     @Test
     public void testAppleEatenIncreasesBodyParts() {

@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c83fb2ad-ccfb-4add-a335-41e77a86590e" name="Changes" comment="I have introduced a play again button which becomes visible at the game over screen. It's in the way of the score, so I want to rearrange these.">
+    <list default="true" id="c83fb2ad-ccfb-4add-a335-41e77a86590e" name="Changes" comment="Rearranged the game over screen, so that game over, score, and play again button do not overlap.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/GamePanelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GamePanelTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,21 +57,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GamePanelTest.testAppleIsOnSnake" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GamePanelTest.testAppleEatenIncreasesBodyParts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SnakeGame" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="GamePanelTest" />
-      <option name="METHOD_NAME" value="testAppleIsOnSnake" />
+      <option name="METHOD_NAME" value="testAppleEatenIncreasesBodyParts" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GamePanelTest.testNewAppleNotOnSnake" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GamePanelTest.testPlayAgainRestartsGame" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SnakeGame" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="GamePanelTest" />
-      <option name="METHOD_NAME" value="testNewAppleNotOnSnake" />
+      <option name="METHOD_NAME" value="testPlayAgainRestartsGame" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GamePanelTest.testSnakeHitsItselfGameOver" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SnakeGame" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GamePanelTest" />
+      <option name="METHOD_NAME" value="testSnakeHitsItselfGameOver" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -80,8 +91,9 @@
       <list>
         <item itemvalue="Application.SnakeGame" />
         <item itemvalue="JUnit.GamePanelTest" />
-        <item itemvalue="JUnit.GamePanelTest.testAppleIsOnSnake" />
-        <item itemvalue="JUnit.GamePanelTest.testNewAppleNotOnSnake" />
+        <item itemvalue="JUnit.GamePanelTest.testPlayAgainRestartsGame" />
+        <item itemvalue="JUnit.GamePanelTest.testAppleEatenIncreasesBodyParts" />
+        <item itemvalue="JUnit.GamePanelTest.testSnakeHitsItselfGameOver" />
       </list>
     </recent_temporary>
   </component>
